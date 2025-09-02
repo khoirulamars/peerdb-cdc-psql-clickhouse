@@ -263,15 +263,6 @@ docker compose down -v
 docker compose up -d
 ```
 
-## 📈 Tips Optimasi Performa
-
-1. **Batch Size**: Untuk throughput tinggi, gunakan batch size 500-1000
-2. **Delay**: Kurangi delay antar batch untuk testing performa maksimal
-3. **Resource Monitoring**: Pantau CPU dan memory usage melalui monitoring script
-4. **Index**: Pastikan tabel target memiliki index yang sesuai
-5. **ClickHouse Tuning**: Optimalkan settings ClickHouse untuk insert performa
-6. **PostgreSQL WAL**: Optimalkan PostgreSQL WAL settings untuk CDC
-
 ## 🔄 Workflow CDC
 
 1. **Data Insert** ke database PostgreSQL source
