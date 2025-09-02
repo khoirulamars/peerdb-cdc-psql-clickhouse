@@ -28,7 +28,7 @@ peerdb_psql_clickhouse/
 ### 1. Clone Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/khoirulamars/peerdb-cdc-psql-clickhouse
 cd peerdb_psql_clickhouse
 ```
 
