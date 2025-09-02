@@ -44,8 +44,7 @@ docker-compose --version
 #### Jalankan PeerDB Stack
 
 ```powershell
-# Lakukan docker compose down -v
-docker compose down -v
+
 
 # Jalanka Docker Compose
 docker compose up -d
