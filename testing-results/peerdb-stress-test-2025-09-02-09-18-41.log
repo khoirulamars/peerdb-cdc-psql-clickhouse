@@ -1,0 +1,71 @@
+[09:18:41] PeerDB CDC Pipeline INSERT Stress Test
+[09:18:41] ===============================================
+[09:18:41] Test ID: 2025-09-02-09-18-41
+[09:18:41] Target Records: 5000
+[09:18:41] Batch Size: 500
+[09:18:41] Delay Between Batches: 1s
+[09:18:41] Started at: 2025-09-02 09:18:41
+[09:18:41] Stress Test Log: testing-results/peerdb-stress-test-2025-09-02-09-18-41.log
+[09:18:41] Resource Usage Log: testing-results/peerdb-resource-usage-2025-09-02-09-18-41.log
+[09:18:41] 
+[09:18:41] Checking PeerDB prerequisites...
+[09:18:41] PeerDB Catalog: Connected
+[09:18:42] Source Database: Connected
+[09:18:42] All PeerDB prerequisites met!
+[09:18:42] Fetching existing customers from source database...
+[09:18:42] Found 4 customer IDs: 1001, 1002, 1003, 1004
+[09:18:42] Fetching existing products from source database...
+[09:18:42] Found 9 product IDs: 101, 102, 103, 104, 105, 106, 107, 108, 109
+[09:18:42] Initial source order count: 5
+[09:18:51] Resource usage logged for phase: BASELINE
+[09:18:51] Starting PeerDB INSERT stress test...
+[09:18:51] Starting PeerDB bulk INSERT test: 5000 records in batches of 500
+[09:19:02] Resource usage logged for phase: INSERT-BATCH-1
+Batch 1 completed: 500 records, 469.6 ms, Total Success: 500, Total Failed: 0
+[09:19:13] Resource usage logged for phase: INSERT-BATCH-2
+Batch 2 completed: 500 records, 518.52 ms, Total Success: 1000, Total Failed: 0
+[09:19:24] Resource usage logged for phase: INSERT-BATCH-3
+Batch 3 completed: 500 records, 617.77 ms, Total Success: 1500, Total Failed: 0
+[09:19:35] Resource usage logged for phase: INSERT-BATCH-4
+Batch 4 completed: 500 records, 452.69 ms, Total Success: 2000, Total Failed: 0
+[09:19:47] Resource usage logged for phase: INSERT-BATCH-5
+Batch 5 completed: 500 records, 647.77 ms, Total Success: 2500, Total Failed: 0
+[09:19:47] Progress: 50% | Success: 2500/2500 | Avg Batch: 541.27ms | Test ID: 2025-09-02-09-18-41
+[09:19:58] Resource usage logged for phase: INSERT-BATCH-6
+Batch 6 completed: 500 records, 577.23 ms, Total Success: 3000, Total Failed: 0
+[09:20:09] Resource usage logged for phase: INSERT-BATCH-7
+Batch 7 completed: 500 records, 569.39 ms, Total Success: 3500, Total Failed: 0
+[09:20:19] Resource usage logged for phase: INSERT-BATCH-8
+Batch 8 completed: 500 records, 583.18 ms, Total Success: 4000, Total Failed: 0
+[09:20:30] Resource usage logged for phase: INSERT-BATCH-9
+Batch 9 completed: 500 records, 454.97 ms, Total Success: 4500, Total Failed: 0
+[09:20:40] Resource usage logged for phase: INSERT-BATCH-10
+Batch 10 completed: 500 records, 630.94 ms, Total Success: 5000, Total Failed: 0
+[09:20:40] Progress: 100% | Success: 5000/5000 | Avg Batch: 552.21ms | Test ID: 2025-09-02-09-18-41
+[09:20:40] PeerDB bulk INSERT completed: 5000/5000 records inserted successfully
+[09:20:46] Final source order count: 5005 (inserted: 5000)
+[09:20:46] INSERT operation success count: 5000
+[09:20:46] 
+[09:20:46] PEERDB INSERT PERFORMANCE RESULTS (Test ID: 2025-09-02-09-18-41)
+[09:20:46] =======================================================
+[09:20:46] Test Start Time: 2025-09-02 09:18:41
+[09:20:46] Test End Time: 2025-09-02 09:20:46
+[09:20:46] Test Duration: 00:02:04
+[09:20:46] Total Records Attempted: 5000
+[09:20:46] Successful Operations: 5000
+[09:20:46] Failed Operations: 0
+[09:20:46] Success Rate: 100%
+[09:20:46] Throughput: 40.14 operations/second
+[09:20:46] Average Batch Time: 552.21ms
+[09:20:46] Max Batch Time: 647.77ms
+[09:20:46] Min Batch Time: 452.69ms
+[09:20:46] Log Files Generated:
+[09:20:46]   Stress Test Log: testing-results/peerdb-stress-test-2025-09-02-09-18-41.log
+[09:20:46]   Resource Usage Log: testing-results/peerdb-resource-usage-2025-09-02-09-18-41.log
+[09:20:46] =======================================================
+[09:20:55] Resource usage logged for phase: FINAL
+[09:20:55] 
+[09:20:55] PeerDB stress test completed successfully!
+[09:20:55] Unique log files generated with Test ID: 2025-09-02-09-18-41
+[09:20:55] Stress Test Log: testing-results/peerdb-stress-test-2025-09-02-09-18-41.log
+[09:20:55] Resource Usage Log: testing-results/peerdb-resource-usage-2025-09-02-09-18-41.log

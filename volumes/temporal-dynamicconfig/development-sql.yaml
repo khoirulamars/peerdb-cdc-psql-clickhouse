@@ -1,0 +1,25 @@
+# Temporal dynamic configuration for development
+# This file contains dynamic configuration for Temporal server
+
+# Basic settings for development environment
+system.forceSearchAttributesCacheRefreshOnRead:
+  - value: true
+
+# Enable logging for better debugging
+system.enableLogLevel:
+  - value: true
+    
+# Set reasonable limits for development
+limit.maxIDLength:
+  - value: 1000
+
+# History service settings
+history.maxAutoResetPoints:
+  - value: 20
+
+# Matching service settings  
+matching.numTasklistWritePartitions:
+  - value: 1
+
+matching.numTasklistReadPartitions:
+  - value: 1

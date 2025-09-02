@@ -1,0 +1,317 @@
+========================================
+PeerDB INSERT Stress Test Resource Log
+Test ID: 2025-08-29-13-03-38
+Test Start: 2025-08-29 13:03:39
+Record Count: 5000
+Batch Size: 500
+========================================
+
+2025-08-29 13:03:39	BASELINE
+DOCKER STATS:
+PEERDB CONTAINERS:
+NAME                        CPU %     MEM USAGE / LIMIT     NET I/O           BLOCK I/O
+peerdb-ui                   0.00%     49.96MiB / 3.726GiB   159kB / 126kB     1.65MB / 8.19kB
+flow_api                    0.00%     21.17MiB / 3.726GiB   95kB / 125kB      299kB / 0B
+flow-snapshot-worker        0.00%     22.42MiB / 3.726GiB   53.8kB / 49.1kB   1.44MB / 0B
+flow-worker                 0.00%     116.7MiB / 3.726GiB   396kB / 290kB     1.52MB / 0B
+peerdb-server               0.00%     5.801MiB / 3.726GiB   9.14kB / 2.33kB   2.42MB / 0B
+peerdb-quickstart-minio-1   0.40%     215.6MiB / 3.726GiB   35.9kB / 17kB     10.8MB / 254kB
+
+CATALOG CONTAINER:
+NAME      CPU %     MEM USAGE / LIMIT     NET I/O           BLOCK I/O
+catalog   2.14%     153.6MiB / 3.726GiB   5.94MB / 8.63MB   12.8MB / 28.6MB
+
+TEMPORAL CONTAINERS:
+NAME                   CPU %     MEM USAGE / LIMIT     NET I/O           BLOCK I/O
+temporal-ui            0.00%     7.777MiB / 3.726GiB   4.85kB / 2.56kB   2.01MB / 0B
+temporal-admin-tools   6.48%     2.121MiB / 3.726GiB   1.1MB / 268kB     1.95MB / 0B
+temporal               4.68%     105.9MiB / 3.726GiB   8.92MB / 7.1MB    15.2MB / 8.19kB
+
+CLICKHOUSE CONTAINER:
+NAME         CPU %     MEM USAGE / LIMIT     NET I/O           BLOCK I/O
+clickhouse   14.46%    363.2MiB / 3.726GiB   33.4kB / 47.3kB   2.33MB / 20.7MB
+====================================================================================================
+2025-08-29 13:03:49	INSERT-BATCH-1
+DOCKER STATS:
+PEERDB CONTAINERS:
+NAME                        CPU %     MEM USAGE / LIMIT     NET I/O           BLOCK I/O
+peerdb-ui                   0.00%     49.93MiB / 3.726GiB   159kB / 126kB     1.65MB / 8.19kB
+flow_api                    0.00%     21.16MiB / 3.726GiB   95.3kB / 126kB    299kB / 0B
+flow-snapshot-worker        0.00%     22.39MiB / 3.726GiB   53.9kB / 49.3kB   1.44MB / 0B
+flow-worker                 0.03%     187.2MiB / 3.726GiB   462kB / 296kB     1.79MB / 0B
+peerdb-server               0.00%     5.742MiB / 3.726GiB   9.14kB / 2.33kB   2.42MB / 0B
+peerdb-quickstart-minio-1   0.04%     215.3MiB / 3.726GiB   35.9kB / 17kB     10.8MB / 254kB
+
+CATALOG CONTAINER:
+NAME      CPU %     MEM USAGE / LIMIT     NET I/O           BLOCK I/O
+catalog   1.51%     153.6MiB / 3.726GiB   6.06MB / 9.06MB   12.9MB / 29.2MB
+
+TEMPORAL CONTAINERS:
+NAME                   CPU %     MEM USAGE / LIMIT     NET I/O           BLOCK I/O
+temporal-ui            0.00%     7.691MiB / 3.726GiB   4.85kB / 2.56kB   2.01MB / 0B
+temporal-admin-tools   7.14%     3.125MiB / 3.726GiB   1.15MB / 281kB    3.02MB / 49.2kB
+temporal               7.30%     106.2MiB / 3.726GiB   9.25MB / 7.26MB   15.2MB / 8.19kB
+
+CLICKHOUSE CONTAINER:
+NAME         CPU %     MEM USAGE / LIMIT   NET I/O           BLOCK I/O
+clickhouse   24.15%    360MiB / 3.726GiB   58.4kB / 65.8kB   2.49MB / 20.7MB
+====================================================================================================
+2025-08-29 13:04:00	INSERT-BATCH-2
+DOCKER STATS:
+PEERDB CONTAINERS:
+NAME                        CPU %     MEM USAGE / LIMIT     NET I/O           BLOCK I/O
+peerdb-ui                   0.00%     49.91MiB / 3.726GiB   159kB / 126kB     1.65MB / 8.19kB
+flow_api                    0.06%     21.16MiB / 3.726GiB   95.5kB / 126kB    299kB / 0B
+flow-snapshot-worker        0.30%     22.37MiB / 3.726GiB   54.8kB / 50.4kB   1.44MB / 0B
+flow-worker                 0.00%     188.6MiB / 3.726GiB   557kB / 343kB     3.12MB / 0B
+peerdb-server               0.00%     5.695MiB / 3.726GiB   9.14kB / 2.33kB   2.42MB / 0B
+peerdb-quickstart-minio-1   0.12%     215.1MiB / 3.726GiB   57.8kB / 37.9kB   10.8MB / 279kB
+
+CATALOG CONTAINER:
+NAME      CPU %     MEM USAGE / LIMIT     NET I/O           BLOCK I/O
+catalog   1.05%     154.3MiB / 3.726GiB   6.21MB / 9.46MB   13MB / 29.5MB
+
+TEMPORAL CONTAINERS:
+NAME                   CPU %     MEM USAGE / LIMIT     NET I/O           BLOCK I/O
+temporal-ui            0.00%     7.691MiB / 3.726GiB   4.92kB / 2.62kB   2.01MB / 0B
+temporal-admin-tools   9.81%     3.129MiB / 3.726GiB   1.22MB / 295kB    3.02MB / 49.2kB
+temporal               6.41%     107MiB / 3.726GiB     9.63MB / 7.45MB   15.2MB / 8.19kB
+
+CLICKHOUSE CONTAINER:
+NAME         CPU %     MEM USAGE / LIMIT     NET I/O           BLOCK I/O
+clickhouse   16.30%    360.1MiB / 3.726GiB   83.4kB / 83.6kB   2.49MB / 20.7MB
+====================================================================================================
+2025-08-29 13:04:10	INSERT-BATCH-3
+DOCKER STATS:
+PEERDB CONTAINERS:
+NAME                        CPU %     MEM USAGE / LIMIT     NET I/O           BLOCK I/O
+peerdb-ui                   0.00%     49.9MiB / 3.726GiB    159kB / 126kB     1.65MB / 8.19kB
+flow_api                    0.00%     21.16MiB / 3.726GiB   95.7kB / 126kB    299kB / 0B
+flow-snapshot-worker        0.00%     22.4MiB / 3.726GiB    56.1kB / 51.7kB   1.44MB / 0B
+flow-worker                 0.09%     121.6MiB / 3.726GiB   633kB / 384kB     3.12MB / 0B
+peerdb-server               0.00%     5.695MiB / 3.726GiB   9.14kB / 2.33kB   2.42MB / 0B
+peerdb-quickstart-minio-1   0.17%     215.4MiB / 3.726GiB   79.5kB / 58.6kB   10.9MB / 299kB
+
+CATALOG CONTAINER:
+NAME      CPU %     MEM USAGE / LIMIT     NET I/O           BLOCK I/O
+catalog   1.54%     154.4MiB / 3.726GiB   6.35MB / 9.89MB   13MB / 29.7MB
+
+TEMPORAL CONTAINERS:
+NAME                   CPU %     MEM USAGE / LIMIT     NET I/O           BLOCK I/O
+temporal-ui            0.00%     7.691MiB / 3.726GiB   4.98kB / 2.69kB   2.01MB / 0B
+temporal-admin-tools   6.28%     3.133MiB / 3.726GiB   1.28MB / 310kB    3.02MB / 49.2kB
+temporal               5.43%     106.2MiB / 3.726GiB   10MB / 7.65MB     15.2MB / 8.19kB
+
+CLICKHOUSE CONTAINER:
+NAME         CPU %     MEM USAGE / LIMIT     NET I/O         BLOCK I/O
+clickhouse   22.75%    374.4MiB / 3.726GiB   108kB / 102kB   2.49MB / 24MB
+====================================================================================================
+2025-08-29 13:04:21	INSERT-BATCH-4
+DOCKER STATS:
+PEERDB CONTAINERS:
+NAME                        CPU %     MEM USAGE / LIMIT     NET I/O           BLOCK I/O
+peerdb-ui                   0.00%     49.9MiB / 3.726GiB    159kB / 126kB     1.65MB / 8.19kB
+flow_api                    0.00%     21.16MiB / 3.726GiB   96kB / 126kB      299kB / 0B
+flow-snapshot-worker        0.00%     22.56MiB / 3.726GiB   57.1kB / 52.6kB   1.44MB / 0B
+flow-worker                 0.09%     184.3MiB / 3.726GiB   725kB / 431kB     3.12MB / 0B
+peerdb-server               0.00%     5.695MiB / 3.726GiB   9.14kB / 2.33kB   2.42MB / 0B
+peerdb-quickstart-minio-1   0.04%     215.7MiB / 3.726GiB   102kB / 79.6kB    10.9MB / 319kB
+
+CATALOG CONTAINER:
+NAME      CPU %     MEM USAGE / LIMIT   NET I/O           BLOCK I/O
+catalog   2.83%     154MiB / 3.726GiB   6.49MB / 10.3MB   13MB / 29.9MB
+
+TEMPORAL CONTAINERS:
+NAME                   CPU %     MEM USAGE / LIMIT     NET I/O           BLOCK I/O
+temporal-ui            2.01%     7.324MiB / 3.726GiB   5.84kB / 3.57kB   2.01MB / 0B
+temporal-admin-tools   7.21%     3.766MiB / 3.726GiB   1.34MB / 324kB    3.9MB / 65.5kB
+temporal               12.49%    106.1MiB / 3.726GiB   10.4MB / 7.84MB   15.2MB / 8.19kB
+
+CLICKHOUSE CONTAINER:
+NAME         CPU %     MEM USAGE / LIMIT     NET I/O         BLOCK I/O
+clickhouse   23.85%    364.8MiB / 3.726GiB   133kB / 121kB   2.49MB / 24MB
+====================================================================================================
+2025-08-29 13:04:31	INSERT-BATCH-5
+DOCKER STATS:
+PEERDB CONTAINERS:
+NAME                        CPU %     MEM USAGE / LIMIT     NET I/O           BLOCK I/O
+peerdb-ui                   0.00%     49.86MiB / 3.726GiB   159kB / 126kB     1.65MB / 8.19kB
+flow_api                    0.00%     21.16MiB / 3.726GiB   96.2kB / 126kB    299kB / 0B
+flow-snapshot-worker        0.00%     23.2MiB / 3.726GiB    58.7kB / 55.8kB   2.13MB / 0B
+flow-worker                 0.00%     193MiB / 3.726GiB     816kB / 480kB     3.94MB / 319kB
+peerdb-server               0.00%     5.625MiB / 3.726GiB   9.14kB / 2.33kB   2.42MB / 0B
+peerdb-quickstart-minio-1   0.19%     216.1MiB / 3.726GiB   124kB / 101kB     11MB / 393kB
+
+CATALOG CONTAINER:
+NAME      CPU %     MEM USAGE / LIMIT     NET I/O           BLOCK I/O
+catalog   2.33%     154.2MiB / 3.726GiB   6.76MB / 10.8MB   13MB / 31MB
+
+TEMPORAL CONTAINERS:
+NAME                   CPU %     MEM USAGE / LIMIT     NET I/O           BLOCK I/O
+temporal-ui            0.00%     7.324MiB / 3.726GiB   5.84kB / 3.57kB   2.01MB / 0B
+temporal-admin-tools   9.41%     3.836MiB / 3.726GiB   1.41MB / 338kB    3.9MB / 65.5kB
+temporal               3.38%     106.4MiB / 3.726GiB   10.8MB / 8.15MB   15.2MB / 8.19kB
+
+CLICKHOUSE CONTAINER:
+NAME         CPU %     MEM USAGE / LIMIT     NET I/O         BLOCK I/O
+clickhouse   35.94%    371.5MiB / 3.726GiB   159kB / 139kB   2.49MB / 24MB
+====================================================================================================
+2025-08-29 13:04:42	INSERT-BATCH-6
+DOCKER STATS:
+PEERDB CONTAINERS:
+NAME                        CPU %     MEM USAGE / LIMIT     NET I/O           BLOCK I/O
+peerdb-ui                   0.00%     49.86MiB / 3.726GiB   159kB / 126kB     1.65MB / 8.19kB
+flow_api                    0.00%     21.3MiB / 3.726GiB    96.3kB / 127kB    328kB / 0B
+flow-snapshot-worker        0.00%     23.2MiB / 3.726GiB    58.8kB / 55.8kB   2.13MB / 0B
+flow-worker                 0.00%     195.9MiB / 3.726GiB   917kB / 525kB     3.94MB / 319kB
+peerdb-server               0.00%     5.625MiB / 3.726GiB   9.14kB / 2.33kB   2.42MB / 0B
+peerdb-quickstart-minio-1   0.00%     216.1MiB / 3.726GiB   146kB / 122kB     11MB / 414kB
+
+CATALOG CONTAINER:
+NAME      CPU %     MEM USAGE / LIMIT     NET I/O           BLOCK I/O
+catalog   3.68%     154.5MiB / 3.726GiB   6.91MB / 11.3MB   13MB / 31.3MB
+
+TEMPORAL CONTAINERS:
+NAME                   CPU %     MEM USAGE / LIMIT     NET I/O           BLOCK I/O
+temporal-ui            0.00%     7.324MiB / 3.726GiB   5.91kB / 3.63kB   2.01MB / 0B
+temporal-admin-tools   6.75%     3.773MiB / 3.726GiB   1.46MB / 351kB    3.9MB / 65.5kB
+temporal               6.98%     106.6MiB / 3.726GiB   11.2MB / 8.32MB   15.2MB / 8.19kB
+
+CLICKHOUSE CONTAINER:
+NAME         CPU %     MEM USAGE / LIMIT     NET I/O         BLOCK I/O
+clickhouse   27.99%    370.6MiB / 3.726GiB   184kB / 158kB   2.49MB / 28.5MB
+====================================================================================================
+2025-08-29 13:04:53	INSERT-BATCH-7
+DOCKER STATS:
+PEERDB CONTAINERS:
+NAME                        CPU %     MEM USAGE / LIMIT     NET I/O           BLOCK I/O
+peerdb-ui                   0.00%     49.86MiB / 3.726GiB   159kB / 126kB     1.65MB / 8.19kB
+flow_api                    0.00%     21.3MiB / 3.726GiB    96.6kB / 127kB    328kB / 0B
+flow-snapshot-worker        0.00%     23.2MiB / 3.726GiB    58.9kB / 55.9kB   2.13MB / 0B
+flow-worker                 0.07%     196.3MiB / 3.726GiB   1.01MB / 579kB    4.1MB / 319kB
+peerdb-server               0.00%     5.625MiB / 3.726GiB   9.14kB / 2.33kB   2.42MB / 0B
+peerdb-quickstart-minio-1   0.00%     216.1MiB / 3.726GiB   168kB / 143kB     11MB / 434kB
+
+CATALOG CONTAINER:
+NAME      CPU %     MEM USAGE / LIMIT   NET I/O           BLOCK I/O
+catalog   1.95%     155MiB / 3.726GiB   7.15MB / 11.7MB   13.1MB / 31.7MB
+
+TEMPORAL CONTAINERS:
+NAME                   CPU %     MEM USAGE / LIMIT     NET I/O           BLOCK I/O
+temporal-ui            0.00%     7.324MiB / 3.726GiB   5.97kB / 3.7kB    2.01MB / 0B
+temporal-admin-tools   10.04%    3.773MiB / 3.726GiB   1.53MB / 365kB    3.9MB / 65.5kB
+temporal               7.24%     106.4MiB / 3.726GiB   11.6MB / 8.61MB   15.2MB / 8.19kB
+
+CLICKHOUSE CONTAINER:
+NAME         CPU %     MEM USAGE / LIMIT     NET I/O         BLOCK I/O
+clickhouse   21.83%    368.1MiB / 3.726GiB   209kB / 176kB   2.49MB / 28.5MB
+====================================================================================================
+2025-08-29 13:05:04	INSERT-BATCH-8
+DOCKER STATS:
+PEERDB CONTAINERS:
+NAME                        CPU %     MEM USAGE / LIMIT     NET I/O           BLOCK I/O
+peerdb-ui                   0.00%     49.86MiB / 3.726GiB   159kB / 126kB     1.65MB / 8.19kB
+flow_api                    0.43%     21.42MiB / 3.726GiB   97.3kB / 128kB    442kB / 0B
+flow-snapshot-worker        0.00%     23.19MiB / 3.726GiB   59.2kB / 56.2kB   2.13MB / 0B
+flow-worker                 0.17%     184.7MiB / 3.726GiB   1.09MB / 620kB    4.1MB / 360kB
+peerdb-server               0.00%     5.621MiB / 3.726GiB   9.14kB / 2.33kB   2.42MB / 0B
+peerdb-quickstart-minio-1   0.04%     216.2MiB / 3.726GiB   190kB / 164kB     11.2MB / 459kB
+
+CATALOG CONTAINER:
+NAME      CPU %     MEM USAGE / LIMIT     NET I/O           BLOCK I/O
+catalog   2.00%     154.9MiB / 3.726GiB   7.28MB / 12.1MB   13.1MB / 32.1MB
+
+TEMPORAL CONTAINERS:
+NAME                   CPU %     MEM USAGE / LIMIT     NET I/O          BLOCK I/O
+temporal-ui            0.00%     7.32MiB / 3.726GiB    5.97kB / 3.7kB   2.01MB / 0B
+temporal-admin-tools   6.63%     4.008MiB / 3.726GiB   1.58MB / 378kB   4.19MB / 77.8kB
+temporal               7.52%     106.3MiB / 3.726GiB   12MB / 8.79MB    15.2MB / 8.19kB
+
+CLICKHOUSE CONTAINER:
+NAME         CPU %     MEM USAGE / LIMIT     NET I/O         BLOCK I/O
+clickhouse   19.89%    379.2MiB / 3.726GiB   209kB / 177kB   2.93MB / 28.5MB
+====================================================================================================
+2025-08-29 13:05:13	INSERT-BATCH-9
+DOCKER STATS:
+PEERDB CONTAINERS:
+NAME                        CPU %     MEM USAGE / LIMIT     NET I/O           BLOCK I/O
+peerdb-ui                   0.00%     49.86MiB / 3.726GiB   159kB / 126kB     1.65MB / 8.19kB
+flow_api                    0.00%     21.42MiB / 3.726GiB   97.5kB / 128kB    442kB / 0B
+flow-snapshot-worker        0.00%     23.19MiB / 3.726GiB   59.2kB / 56.2kB   2.13MB / 0B
+flow-worker                 0.00%     189.1MiB / 3.726GiB   1.19MB / 674kB    4.67MB / 360kB
+peerdb-server               0.00%     5.621MiB / 3.726GiB   9.14kB / 2.33kB   2.42MB / 0B
+peerdb-quickstart-minio-1   0.05%     216.2MiB / 3.726GiB   213kB / 186kB     11.2MB / 479kB
+
+CATALOG CONTAINER:
+NAME      CPU %     MEM USAGE / LIMIT     NET I/O           BLOCK I/O
+catalog   1.73%     155.2MiB / 3.726GiB   7.52MB / 12.6MB   13.1MB / 32.6MB
+
+TEMPORAL CONTAINERS:
+NAME                   CPU %     MEM USAGE / LIMIT     NET I/O           BLOCK I/O
+temporal-ui            0.00%     7.32MiB / 3.726GiB    6.04kB / 3.77kB   2.01MB / 0B
+temporal-admin-tools   6.42%     4.008MiB / 3.726GiB   1.65MB / 392kB    4.19MB / 77.8kB
+temporal               17.11%    106.1MiB / 3.726GiB   12.4MB / 9.06MB   15.2MB / 8.19kB
+
+CLICKHOUSE CONTAINER:
+NAME         CPU %     MEM USAGE / LIMIT     NET I/O         BLOCK I/O
+clickhouse   17.63%    378.4MiB / 3.726GiB   235kB / 195kB   2.93MB / 28.5MB
+====================================================================================================
+2025-08-29 13:05:23	INSERT-BATCH-10
+DOCKER STATS:
+PEERDB CONTAINERS:
+NAME                        CPU %     MEM USAGE / LIMIT     NET I/O           BLOCK I/O
+peerdb-ui                   0.00%     49.86MiB / 3.726GiB   159kB / 126kB     1.65MB / 8.19kB
+flow_api                    0.00%     21.42MiB / 3.726GiB   97.7kB / 128kB    442kB / 0B
+flow-snapshot-worker        0.00%     23.19MiB / 3.726GiB   59.3kB / 56.4kB   2.13MB / 0B
+flow-worker                 0.13%     192.2MiB / 3.726GiB   1.29MB / 716kB    4.67MB / 360kB
+peerdb-server               0.00%     5.621MiB / 3.726GiB   9.14kB / 2.33kB   2.42MB / 0B
+peerdb-quickstart-minio-1   0.21%     216.2MiB / 3.726GiB   235kB / 207kB     11.2MB / 500kB
+
+CATALOG CONTAINER:
+NAME      CPU %     MEM USAGE / LIMIT     NET I/O         BLOCK I/O
+catalog   1.69%     155.3MiB / 3.726GiB   7.66MB / 13MB   13.1MB / 32.8MB
+
+TEMPORAL CONTAINERS:
+NAME                   CPU %     MEM USAGE / LIMIT     NET I/O           BLOCK I/O
+temporal-ui            0.16%     7.32MiB / 3.726GiB    6.23kB / 3.89kB   2.01MB / 0B
+temporal-admin-tools   6.63%     4.074MiB / 3.726GiB   1.7MB / 405kB     4.19MB / 77.8kB
+temporal               11.68%    106.4MiB / 3.726GiB   12.7MB / 9.24MB   15.2MB / 8.19kB
+
+CLICKHOUSE CONTAINER:
+NAME         CPU %     MEM USAGE / LIMIT     NET I/O         BLOCK I/O
+clickhouse   4.89%     377.1MiB / 3.726GiB   260kB / 214kB   2.93MB / 33.9MB
+====================================================================================================
+2025-08-29 13:05:38	FINAL
+DOCKER STATS:
+PEERDB CONTAINERS:
+NAME                        CPU %     MEM USAGE / LIMIT     NET I/O           BLOCK I/O
+peerdb-ui                   0.00%     49.86MiB / 3.726GiB   159kB / 126kB     1.65MB / 8.19kB
+flow_api                    0.00%     21.42MiB / 3.726GiB   98kB / 128kB      442kB / 0B
+flow-snapshot-worker        0.00%     23.18MiB / 3.726GiB   61.8kB / 59.5kB   2.13MB / 0B
+flow-worker                 0.21%     192.2MiB / 3.726GiB   1.33MB / 760kB    4.67MB / 360kB
+peerdb-server               0.00%     5.621MiB / 3.726GiB   9.14kB / 2.33kB   2.42MB / 0B
+peerdb-quickstart-minio-1   0.14%     216.4MiB / 3.726GiB   257kB / 228kB     11.3MB / 573kB
+
+CATALOG CONTAINER:
+NAME      CPU %     MEM USAGE / LIMIT     NET I/O           BLOCK I/O
+catalog   1.51%     155.5MiB / 3.726GiB   7.99MB / 13.6MB   13.1MB / 33.8MB
+
+TEMPORAL CONTAINERS:
+NAME                   CPU %     MEM USAGE / LIMIT     NET I/O           BLOCK I/O
+temporal-ui            0.00%     7.273MiB / 3.726GiB   6.27kB / 3.93kB   2.01MB / 0B
+temporal-admin-tools   5.61%     3.945MiB / 3.726GiB   1.78MB / 424kB    4.19MB / 77.8kB
+temporal               5.67%     105.9MiB / 3.726GiB   13.3MB / 9.63MB   15.2MB / 8.19kB
+
+CLICKHOUSE CONTAINER:
+NAME         CPU %     MEM USAGE / LIMIT   NET I/O         BLOCK I/O
+clickhouse   13.04%    430MiB / 3.726GiB   284kB / 232kB   2.93MB / 33.9MB
+====================================================================================================
+
+========================================
+Test Completion Summary
+Test ID: 2025-08-29-13-03-38
+Test End: 2025-08-29 13:05:47
+Total Duration: 00:02:08.5796975
+Records Processed: 5000/5000
+Success Rate: 100%
+========================================

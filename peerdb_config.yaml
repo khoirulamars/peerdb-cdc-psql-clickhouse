@@ -1,0 +1,53 @@
+# PeerDB Mass Insert Test Configuration
+# Konfigurasi untuk testing CDC dengan mass insert
+
+# Source Database (tempat insert data)
+source_database:
+  host: localhost
+  port: 9901          # PeerDB catalog port
+  user: postgres
+  password: postgres
+  database: source    # Database source yang dibuat oleh quickstart script
+
+# Target Database (tempat replikasi CDC)
+target_database:
+  host: localhost
+  port: 9901          # Same PeerDB catalog
+  user: postgres
+  password: postgres
+  database: target    # Database target yang dibuat oleh quickstart script
+
+# ClickHouse Target Database (opsional)
+clickhouse_target_database:
+  host: localhost
+  port: 8123           # Default port ClickHouse HTTP
+  user: default
+  password: 'password123'         # Kosong jika tidak ada password
+  database: default    # Database default ClickHouse
+
+# PeerDB UI Configuration
+peerdb_ui:
+  url: http://localhost:3000
+
+# Test Configuration
+test_settings:
+  default_record_count: 100000
+  default_batch_size: 5000
+  cdc_wait_time_seconds: 15    # Waktu tunggu untuk CDC catch up
+  monitor_interval_seconds: 5   # Interval monitoring saat processing
+
+# Docker Containers to Monitor
+docker_containers:
+  - catalog              # PeerDB PostgreSQL catalog
+  - temporal            # PeerDB Temporal
+  - peerdb-server       # PeerDB main server
+  - peerdb-flow-worker  # PeerDB flow worker
+
+# Expected Table Schema (for validation)
+expected_tables:
+  source:
+    - customers
+    - products  
+    - orders
+  target:
+    - orders_cdc  # atau nama tabel target yang dikonfigurasi di PeerDB mirror
