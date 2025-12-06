@@ -1,7 +1,7 @@
 # PeerDB - Pipeline CDC (Change Data Capture) dan Analisis Performa
 ![PeerDB](images/cdc_psql_clickhouse.png)
 
-PeerDB adalah platform CDC (Change Data Capture) real-time yang memungkinkan replikasi data dari database PostgreSQL ke ClickHouse.
+PeerDB adalah platform Change Data Capture (CDC) real-time yang memungkinkan replikasi data dari database PostgreSQL ke ClickHouse.
 
 ## 📁 Struktur Proyek
 
